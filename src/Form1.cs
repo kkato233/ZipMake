@@ -22,7 +22,7 @@ namespace ZipMake
 
         private void Form1_Shown(object sender, EventArgs e)
         {
-            if (Properties.Settings.Default.DocPassword != null)
+            if (Properties.Settings.Default.DocPassword?.Length > 0)
             {
                 try
                 {
