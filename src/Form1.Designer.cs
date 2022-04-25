@@ -36,6 +36,7 @@ namespace ZipMake
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -59,21 +60,26 @@ namespace ZipMake
             // listBoxFiles
             // 
             this.listBoxFiles.AllowDrop = true;
+            this.listBoxFiles.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.listBoxFiles.FormattingEnabled = true;
             this.listBoxFiles.ItemHeight = 12;
             this.listBoxFiles.Location = new System.Drawing.Point(27, 67);
             this.listBoxFiles.Name = "listBoxFiles";
-            this.listBoxFiles.Size = new System.Drawing.Size(475, 64);
+            this.listBoxFiles.Size = new System.Drawing.Size(478, 64);
             this.listBoxFiles.TabIndex = 3;
             this.listBoxFiles.DragDrop += new System.Windows.Forms.DragEventHandler(this.listBoxFiles_DragDrop);
             this.listBoxFiles.DragEnter += new System.Windows.Forms.DragEventHandler(this.listBoxFiles_DragEnter);
             // 
             // buttonMakeZip
             // 
+            this.buttonMakeZip.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonMakeZip.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.buttonMakeZip.Location = new System.Drawing.Point(27, 148);
             this.buttonMakeZip.Name = "buttonMakeZip";
-            this.buttonMakeZip.Size = new System.Drawing.Size(475, 44);
+            this.buttonMakeZip.Size = new System.Drawing.Size(385, 44);
             this.buttonMakeZip.TabIndex = 4;
             this.buttonMakeZip.Text = "ZIPファイル作成";
             this.buttonMakeZip.UseVisualStyleBackColor = true;
@@ -106,11 +112,24 @@ namespace ZipMake
             this.label4.TabIndex = 7;
             this.label4.Text = "ファイルのあるディレクトリに ZIP ファイルを作成します。";
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.button1.Location = new System.Drawing.Point(418, 148);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(87, 44);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "クリア";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(516, 215);
+            this.ClientSize = new System.Drawing.Size(521, 215);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -118,6 +137,7 @@ namespace ZipMake
             this.Controls.Add(this.listBoxFiles);
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.label1);
+            this.MinimumSize = new System.Drawing.Size(537, 254);
             this.Name = "Form1";
             this.Text = "暗号化ZIPファイルを作成する";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
@@ -136,6 +156,7 @@ namespace ZipMake
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button1;
     }
 }
 
