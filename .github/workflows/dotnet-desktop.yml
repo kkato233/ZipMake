@@ -11,6 +11,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
+      - uses: nuget/setup-nuget@v2
+        with:
+          nuget-version: '5.x'
+      - name: add package src
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          dir: ${{ github.workspace }}\src
+        run: nuget sources Add -Name "MyLocalSrc" -Source ${{ github.workspace }}\lib
       - name: Build DotNET
         run: |
            cd "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\"
