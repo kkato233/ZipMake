@@ -17,9 +17,12 @@ jobs:
           nuget-version: '5.x'
       - name: add package src
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           dir: ${{ github.workspace }}\src
         run: nuget sources Add -Name "MyLocalSrc" -Source ${{ github.workspace }}\lib
+      - name: nuget package restore
+        env:
+          dir: ${{ github.workspace }}\src
+        run: nuget restore
       - name: Add msbuild to PATH
         uses: microsoft/setup-msbuild@v1.0.2
       - name: Build DotNET
