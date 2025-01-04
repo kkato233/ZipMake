@@ -3,7 +3,7 @@ name: Dotnet Desktop MsBuild
 on:
   push:
     branches:
-      - master
+      - master, develop
 
 jobs:
   build:
