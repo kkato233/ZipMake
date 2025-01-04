@@ -25,5 +25,5 @@ jobs:
       - name: Build DotNET
         env:
           dir: ${{ github.workspace }}\src
-        run: MSBuild.exe $Env:GITHUB_WORKSPACE\  **SLN or project**
+        run: MSBuild.exe 
 
