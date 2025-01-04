@@ -20,9 +20,7 @@ jobs:
           dir: ${{ github.workspace }}\src
         run: nuget sources Add -Name "MyLocalSrc" -Source ${{ github.workspace }}\lib
       - name: nuget package restore
-        env:
-          dir: ${{ github.workspace }}\src
-        run: nuget restore
+        run: nuget restore ${{ github.workspace }}\src
       - name: Add msbuild to PATH
         uses: microsoft/setup-msbuild@v1.0.2
       - name: Build DotNET
