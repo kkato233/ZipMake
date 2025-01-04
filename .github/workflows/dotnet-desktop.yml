@@ -23,7 +23,5 @@ jobs:
       - name: Add msbuild to PATH
         uses: microsoft/setup-msbuild@v1.0.2
       - name: Build DotNET
-        env:
-          dir: ${{ github.workspace }}\src
-        run: MSBuild.exe ZipMake.csproj
+        run: MSBuild.exe ${{ github.workspace }}\src\ZipMake.csproj
 
